@@ -1,0 +1,9 @@
+<form (ngSubmit)="add_product(product_form.value)" #product_form="ngForm">
+    <input type="text" name="name" ngModel placeholder="Name of the product">
+    <input type="text" name="description" ngModel placeholder="Description of this product">
+    <input type="number" name="price" ngModel placeholder="Price for this product">
+    <input type="url" name="image_url" ngModel placeholder="Image to show to this product">
+    <input type="number" name="rating" ngModel placeholder="Rating for the product">
+    <input type="text" name="categories" ngModel placeholder="Category for the product">
+    <button type="submit">Add Product</button>
+</form>
