@@ -1,0 +1,38 @@
+<div class="modal-header">
+  <h4 class="modal-title">Edit Product</h4>
+  <button type="button" class="close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form #editProductForm="ngForm" (ngSubmit)="edit_product()">
+    <div class="form-group">
+      <label for="product_text_name">Name: </label>
+      <input type="text" class="form-control" id="product_name" required [(ngModel)]="product_to_edit.name" name="name" placeholder="Enter the updated product name">
+    </div>
+    <div class="form-group">
+      <label for="product_text_description">Description: </label>
+      <textarea class="form-control" id="product_description" [(ngModel)]="product_to_edit.description" name="description" required placeholder="Enter the updated product description"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="product_text_price">Price: </label>
+      <input type="number" class="form-control" id="product_price" [(ngModel)]="product_to_edit.price" name="price" required placeholder="Enter the updated product price">
+    </div>
+    <div class="form-group">
+      <label for="product_text_image_url">Image URL: </label>
+      <input type="text" class="form-control" id="product_imageurl" [(ngModel)]="product_to_edit.image_url" name="image_url" required placeholder="Enter the updated product image URL">
+    </div>
+    <div class="form-group">
+      <label for="product_text_rating">Rating: </label>
+      <input type="number" class="form-control" id="product_rating" [(ngModel)]="product_to_edit.rating" name="rating" required placeholder="Enter the updated product rating" step="0.1" min="0" max="5">
+    </div>
+    <div class="form-group">
+      <label for="product_text_categories">Categories: </label>
+      <input type="text" class="form-control" id="product_categories" [(ngModel)]="product_to_edit.categories" name="categories" required placeholder="Enter the updated categories (comma separated)">
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="activeModal.dismiss('cancel')">Cancel</button>
+      <button type="submit" class="btn btn-primary">Save Changes</button>
+    </div>
+  </form>
+</div>

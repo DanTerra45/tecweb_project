@@ -1,17 +1,17 @@
-# API Test Project
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
+# API & JWL Test Project
 
 ## Project Initialization Steps
 
 To set up this project, follow these instructions:
 
-1. Create a Python virtual environment and place the `app.py` and `db.py` files inside it (provided inside the `bd_web` folder).
+1. Create a Python virtual environment, learn how to create one [here](https://docs.python.org/3/library/venv.html) if you are unsure, place the `app.py` and `db.py` files inside your virtual environment (provided inside the `bd_web` folder).
 2. Ensure that you have all the required libraries installed by running the following command: `pip install -r requirements.txt` (provided inside the `bd_web` folder)
-3. Next, within the virtual environment, start the Flask server with: `flask run`
-4. In parallel, initiate the Angular project by following the next steps.
+3. Within the virtual environment, start the Flask server with: `flask run` or if you're using a VSCode/VSCodium Python extension to run it directly.
+4. In parallel on a new terminal, initiate the Angular project by following the next steps.
 
-The project utilized an open-source resource named [Hoppscotch](https://hoppscotch.io/) to make sure the API works properly.
+The project utilized an open-source (FOSS) named [Hoppscotch](https://hoppscotch.io/) to make sure the API works properly.
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
 
 ## Development server
 

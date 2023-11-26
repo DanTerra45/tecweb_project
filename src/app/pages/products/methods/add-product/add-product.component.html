@@ -1,9 +1,38 @@
-<form (ngSubmit)="add_product(product_form.value)" #product_form="ngForm">
-    <input type="text" name="name" ngModel placeholder="Name of the product">
-    <input type="text" name="description" ngModel placeholder="Description of this product">
-    <input type="number" name="price" ngModel placeholder="Price for this product">
-    <input type="url" name="image_url" ngModel placeholder="Image to show to this product">
-    <input type="number" name="rating" ngModel placeholder="Rating for the product">
-    <input type="text" name="categories" ngModel placeholder="Category for the product">
-    <button type="submit">Add Product</button>
-</form>
+<div class="modal-header">
+    <h4 class="modal-title">Add New Product</h4>
+    <button type="button" class="close" aria-label="Close" (click)="active_modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form #productForm="ngForm" (ngSubmit)="add_product(productForm.value)">
+      <div class="form-group">
+        <label for="product_text_name">Name: </label>
+        <input type="text" class="form-control" id="product_name" required ngModel name="name" placeholder="Name of the new product">
+      </div>
+      <div class="form-group">
+        <label for="product_text_description">Description: </label>
+        <input type="text" class="form-control" id="product_description" required ngModel name="description" placeholder="Description of the new product">
+      </div>
+      <div class="form-group">
+        <label for="product_text_price">Price: </label>
+        <input type="number" class="form-control" id="product_price" required ngModel name="price" placeholder="Price of the new product">
+      </div>
+      <div class="form-group">
+        <label for="product_text_image_url">Image URL: </label>
+        <input type="text" class="form-control" id="product_image_url" required ngModel name="image_url" placeholder="New product Image URL">
+      </div>
+      <div class="form-group">
+        <label for="product_text_rating">Rating: </label>
+        <input type="number" class="form-control" id="product_rating" required ngModel name="rating" placeholder="Rating of the new product" step="0.1" min="0" max="5">
+      </div>
+      <div class="form-group">
+        <label for="product_text_categories">Categories: </label>
+        <input type="text" class="form-control" id="product_categories" required ngModel name="categories" placeholder="Categories of this new product (comma separated)">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="active_modal.dismiss('cancel click')">Cancel</button>
+        <button type="submit" class="btn btn-primary">Add Product</button>
+      </div>
+    </form>
+</div>

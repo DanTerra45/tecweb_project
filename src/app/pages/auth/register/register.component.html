@@ -1,0 +1,7 @@
+<h2>Register</h2>
+<form [formGroup]="register_form" (ngSubmit)="register_user()">
+    <input type="text" placeholder="Username" formControlName="username" required>
+    <input type="email" placeholder="Email" formControlName="email" required>
+    <input type="password" placeholder="Password" formControlName="password" required>
+    <button type="submit" [disabled]="!register_form.valid">Register</button>
+</form>

@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './start.component.html',
   styleUrls: ['./start.component.less']
 })
-export class StartComponent {
 
+export class StartComponent {
 }
