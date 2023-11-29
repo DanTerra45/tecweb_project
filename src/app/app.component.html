@@ -1,9 +1,21 @@
-<nav>
-  <ul>
-    <li><a routerLink="/start">Start</a></li>
-    <li><a routerLink="/get-products">Products</a></li>
-    <li><a routerLink="/login">Log In</a></li>
-    <li><a routerLink="/register">Register</a></li>
+
+<nav class="menu">
+  <div  class="logo-encabezado">
+    <img  src="assets/logo2.jpg" alt="" class="logo">
+  </div>
+  <ul  class="menu-encabezado" >
+    <li class="menu-encabezado-objeto">
+      <a class="menu-encabezado-ruta" routerLink="/start">Home</a>
+    </li>
+    <li class="menu-encabezado-objeto">
+      <a class="menu-encabezado-ruta" routerLink="/get-products">Products</a>
+    </li>
+    <li class="menu-encabezado-objeto">
+      <a class="menu-encabezado-ruta" routerLink="/login">Log In</a>
+    </li>
+    <li class="menu-encabezado-objeto">
+      <a class="menu-encabezado-ruta" routerLink="/register">Register</a>
+    </li>
   </ul>
 </nav>
 <router-outlet></router-outlet>

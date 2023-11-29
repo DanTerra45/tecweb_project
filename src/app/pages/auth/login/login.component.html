@@ -1,6 +1,15 @@
-<h2>Log In</h2>
-<form [formGroup]="login_form" (ngSubmit)="login_user()">
-    <input type="text" placeholder="Username" formControlName="username" required>
-    <input type="password" placeholder="Password" formControlName="password" required>
-    <button type="submit" [disabled]="!login_form.valid">Log In</button>
-</form>
+
+<div class="fondo">
+    <div class="fondo-login" >
+        <h1 class="Titulo-login">Log In</h1>
+        <form [formGroup]="login_form" (ngSubmit)="login_user()">
+            <label class="texto-datos" >USERNAME</label>
+            <input class="datos-login" type="text" placeholder="Username" formControlName="username" required>
+            <label class="texto-datos" >PASSWORD</label>
+            <input class="datos-login" type="password" placeholder="Password" formControlName="password" required>
+            <button class="botton-login" type="submit" [disabled]="!login_form.valid">Log In</button>
+        </form>
+    </div>
+</div>
+
+
